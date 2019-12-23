@@ -38,6 +38,10 @@
     width: 25px;
 }
 
+.search-error {
+    color: #fff;
+}
+
 /* RESPONSIVE styling */
 @media only screen and (max-width: 575px) {
     .header-text {

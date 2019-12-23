@@ -17,3 +17,20 @@
 .display-image {
     width: 100%;
 }
+
+/* Tablet sizing */
+@media only screen and (max-width: 768px) {
+    .display-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+/* Mobile sizing */
+@media only screen and (max-width: 575px) {
+    .display-container {
+        display: block;
+    }
+    .display-image {
+        margin: 5px 0;
+    }
+  }
