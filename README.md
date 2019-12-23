@@ -2,8 +2,6 @@
 
 git clone https://github.com/lrnrsr/giphbank.git
 
-cd giphbank
-
 ### `npm install`
 installs dependencies
 
