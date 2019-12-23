@@ -52,7 +52,7 @@ class Search extends Component {
                     className="search-header-text"
                     onClick={this.resetSearch}
                 >
-                    GIPHBANK
+                    GIPH<wbr />BANK
                     </div>
                 <form
                     className="search-form-style"

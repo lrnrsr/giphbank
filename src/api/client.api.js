@@ -6,7 +6,7 @@ const getGifs = async (searchTerm) => {
     try {
         return await axios({
             method: 'get',
-            url: `https://${BASE_URL}api_key=${API_KEY}&q=${searchTerm}&limit=200&rating=G`,
+            url: `https://${BASE_URL}api_key=${API_KEY}&q=${searchTerm}&limit=21&rating=G`,
         })
             .then(result => result.data)
     } catch (error) {

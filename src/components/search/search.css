@@ -14,7 +14,7 @@
 
 .search-form-style {
     display: flex;
-    margin-bottom: 2%;
+    margin-bottom: 20px;
 }
 
 .search-input {
@@ -43,8 +43,14 @@
 }
 
 /* RESPONSIVE styling */
-@media only screen and (max-width: 575px) {
-    .header-text {
-      font-size: 30px;
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .search-header-text {
+      font-size: 50px;
     }
   }
+
+@media only screen and (max-width: 575px) {
+    .search-header-text {
+        font-size: 40px;
+      }
+}
