@@ -1,0 +1,19 @@
+/* DISPLAY STYLING */
+.display-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 0 auto;
+}
+
+.display-results {
+    color: #fff;
+    display: flex;
+    margin: 2% auto;
+    width: 80%;
+}
+
+.display-image {
+    width: 100%;
+}

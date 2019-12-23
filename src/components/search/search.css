@@ -1,0 +1,46 @@
+/* SEARCH STYLING */
+.search-center {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.search-header-text {
+    color: #fff;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: 900;
+    margin: 3% auto;
+}
+
+.search-form-style {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.search-input {
+    height: 50px;
+    font-size: 20px;
+    width: 100%;
+}
+.search-input::placeholder {
+    font-size: 20px;
+}
+
+.search-button {
+    background: linear-gradient(212deg, #9933ff, #ff6666);
+    border: 0px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.search-icon {
+    height: 25px;
+    width: 25px;
+}
+
+/* RESPONSIVE styling */
+@media only screen and (max-width: 575px) {
+    .header-text {
+      font-size: 30px;
+    }
+  }
