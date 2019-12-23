@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Display from '../display/display'
+import React, { Component, lazy, Suspense } from 'react';
 import getGifs from '../../api/client.api';
 import './search.css'
 import searchIcon from '../../search.svg'
+const Display = lazy(() => import('../display/display'))
 
 class Search extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Search extends Component {
     }
     getData = async () => {
         let gifs = await getGifs(this.state.searchTerm)
-        gifs.data.length > 0 ?
+        gifs.data && gifs.data.length > 0 ?
             this.setState({
                 errors: '',
                 gifs: gifs.data
@@ -66,18 +66,19 @@ class Search extends Component {
                         value={this.state.searchTerm}
                     />
                     <button className="search-button">
-                        <img className="search-icon" alt="search" src={searchIcon} />
+                        <img
+                            alt="search"
+                            className="search-icon"
+                            src={searchIcon}
+                        />
                     </button>
                 </form>
-
-                {this.state.gifs
-                    && <Display gifs={this.state.gifs} />
+                {this.state.gifs &&
+                    <Suspense fallback={<div className="search-loader"></div>}>
+                        <Display gifs={this.state.gifs} />
+                    </Suspense>
                 }
-                {this.state.errors
-                    && <div className='search-error'>
-                        {this.state.errors}
-                    </div>
-                }
+                {this.state.errors && <div className='search-error'>{this.state.errors}</div>}
 
             </div>
         )

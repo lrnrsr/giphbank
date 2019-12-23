@@ -12,7 +12,7 @@
     width: 100%;
 }
 
-/* RESPONSIVE styling */
+/* RESPONSIVE STYLING */
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     .display-container {
       column-count: 2;
