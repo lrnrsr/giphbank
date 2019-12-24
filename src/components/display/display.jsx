@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import './display.css'
+const Image = lazy(() => import('./image'))
 
 const Display = props => {
     return (
         <div className="display-container">
             {props.gifs.map((gif) => (
-                <img
-                    alt={gif.title}
-                    className='display-image'
-                    key={gif.id}
-                    src={gif.images.original.url}
-                />
+                <Suspense fallback={<div className="spinner" />}>
+                    <Image
+                        alt={gif.title}
+                        src={gif.images.original.url}
+                    />
+                </Suspense>
             ))}
         </div>
     )
