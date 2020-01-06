@@ -6,7 +6,10 @@ const Display = props => {
     return (
         <div className="display-container">
             {props.gifs.map((gif) => (
-                <Suspense fallback={<div className="spinner" />}>
+                <Suspense
+                    fallback={<div className="spinner" />}
+                    key={gif.id}
+                >
                     <Image
                         alt={gif.title}
                         src={gif.images.original.url}

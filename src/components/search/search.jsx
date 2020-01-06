@@ -7,6 +7,7 @@ import searchIcon from '../../search.svg'
 class Search extends Component {
     state = {
         errors: '',
+        gif: [],
         searchTerm: ''
     }
 
@@ -53,7 +54,7 @@ class Search extends Component {
                     GIPH<wbr />BANK
                     </div>
                 <form
-                    className="search-form-style"
+                    className="search-form"
                     onSubmit={this.onSubmit}
                 >
                     <input
